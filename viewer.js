@@ -1,7 +1,7 @@
 (() => {
   const KITS = {
     j3: { n: '01', name: 'Yellow kit', flat: 'assets/j3_amarilla_front.webp', flatBack: 'assets/j3_amarilla_back.webp' },
-    j4: { n: '02', name: 'Gray training kit', tone: 0.8, flat: 'assets/j4_gris_front.webp', flatBack: 'assets/j4_gris_back.webp' },
+    j4: { n: '02', name: 'Grey training kit', tone: 0.8, flat: 'assets/j4_gris_front.webp', flatBack: 'assets/j4_gris_back.webp' },
     j1: { n: '03', opt: 'Option 1', name: 'Black kit, option 1', flat: 'assets/j1_celeste_front.webp', flatBack: 'assets/j1_celeste_back.webp' },
     j2: { n: '03', opt: 'Option 2', name: 'Black kit, option 2', flat: 'assets/j2_negra_front.webp', flatBack: 'assets/j2_negra_back.webp' }
   };
