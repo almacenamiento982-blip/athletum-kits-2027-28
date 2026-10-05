@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Athletum FC 2027-28 kits in 3D with the proposed sponsor placement for evian, Reserve Padel and Life Properties.">
+<link rel="icon" type="image/webp" href="assets/athletum_crest.webp">
+<style>html,body{margin:0}img{max-width:100%}</style>
+<title>Athletum Kit Sponsorship</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  /* Athletum, version corporativa: sus colores (negro, amarillo #FFF200, blanco) y sus fuentes
+     (Oswald para titulares, Montserrat para texto), sin texturas ni sombras duras. */
+  :root {
+    color-scheme: light;
+    --bg: #F5F5F4;
+    --surface: #FFFFFF;
+    --ink: #0B0B0B;
+    --yellow: #FFF200;
+    --text: #1C1C1C;
+    --muted: #5E5E5E;
+    --line: #DCDCD9;
+    --line-strong: #0B0B0B;
+    --display: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    --body: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { background: var(--bg); }
+  body { background: var(--bg); color: var(--text); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 56px); }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .02em; line-height: 1.02; margin: 0; text-wrap: balance; color: var(--ink); }
+  p { margin: 0; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 500; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink); }
+  .eyebrow::before { content: ""; width: 28px; height: 4px; background: var(--yellow); }
+
+  /* top bar */
+  .top { background: var(--ink); color: #fff; }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand img { width: 36px; height: auto; }
+  .brand b { font-family: var(--display); font-weight: 600; font-size: 19px; letter-spacing: .12em; text-transform: uppercase; }
+  .top .meta { font-family: var(--display); font-weight: 500; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: #CFCFCF; text-align: right; }
+  .yellow-rule { height: 4px; background: var(--yellow); }
+
+  /* hero */
+  .hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 4vw, 64px); align-items: center; padding-block: clamp(32px, 5vw, 72px); }
+  .hero h1 { font-size: clamp(42px, 5.4vw, 76px); margin-top: 16px; }
+  .lede { color: var(--muted); max-width: 46ch; margin-top: 18px; font-size: 16px; }
+
+  .group-label { font-family: var(--display); font-weight: 500; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin: 28px 0 10px; }
+  .kits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .kit { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-bottom: 3px solid var(--line); cursor: pointer; text-align: left; transition: border-color .15s; }
+  .kit:hover { border-color: #9A9A96; }
+  .kit[aria-pressed="true"] { border-color: var(--ink); border-bottom-color: var(--yellow); }
+  .swatch { display: flex; height: 8px; width: 100%; }
+  .swatch i { flex: 1; }
+  .kit span { font-family: var(--display); font-weight: 600; font-size: 16px; letter-spacing: .04em; text-transform: uppercase; line-height: 1.1; }
+  .kit small { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+
+  .sides { display: inline-grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink); background: var(--surface); }
+  .side { padding: 10px 24px; background: transparent; border: 0; cursor: pointer; font-family: var(--display); font-weight: 500; font-size: 14px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); }
+  .side[aria-pressed="true"] { background: var(--ink); color: var(--yellow); }
+
+  .legend { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+  .legend li { display: grid; grid-template-columns: 112px 1fr; align-items: center; gap: 14px; padding: 10px 12px; border: 1px solid transparent; border-left: 3px solid transparent; opacity: .45; transition: opacity .3s, background .3s, border-color .3s; }
+  .legend li.on { opacity: 1; background: var(--surface); border-color: var(--line); border-left-color: var(--yellow); }
+  .legend img { width: 112px; height: 30px; object-fit: contain; object-position: left center; }
+  .legend span { font-size: 13px; color: var(--muted); }
+  .legend b { display: block; color: var(--ink); font-weight: 600; font-size: 14px; }
+
+  /* stage */
+  .stage-box { position: relative; }
+  .stage { position: relative; width: 100%; aspect-ratio: 1 / 1.02; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; outline: none;
+    border: 1px solid var(--line); background: radial-gradient(ellipse 62% 56% at 50% 46%, #FFFFFF 0%, #EDEDEB 60%, #E2E2DF 100%); }
+  .stage.grabbing { cursor: grabbing; }
+  #gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .fallback { position: absolute; left: 50%; top: 48%; width: 72%; transform: translate(-50%, -50%); }
+  .hud { position: absolute; left: 16px; right: 16px; top: 14px; display: flex; justify-content: space-between; align-items: center; pointer-events: none; }
+  .hud .now { font-family: var(--display); font-weight: 600; font-size: 14px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); background: var(--yellow); padding: 4px 10px; }
+  .hud .deg { font-family: var(--display); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; letter-spacing: .1em; }
+  .zoom { position: absolute; right: 14px; bottom: 14px; display: flex; flex-direction: column; gap: 6px; }
+  .zoom button { width: 38px; height: 38px; background: var(--surface); border: 1px solid var(--ink); cursor: pointer; font-family: var(--display); font-size: 20px; line-height: 1; display: grid; place-items: center; }
+  .zoom button:hover { background: var(--yellow); }
+  .zoom button svg { width: 16px; height: 16px; }
+  .hint { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); pointer-events: none; transition: opacity .6s; white-space: nowrap; }
+  .hint svg { width: 34px; height: 12px; }
+  .stage.used .hint { opacity: 0; }
+  .loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-family: var(--display); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; }
+
+  /* sections */
+  section.block { padding-block: clamp(40px, 6vw, 80px); border-top: 1px solid var(--line); }
+  .block-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+  .block-head h2 { font-size: clamp(30px, 3.6vw, 44px); margin-top: 12px; }
+  .block-head p { color: var(--muted); max-width: 48ch; font-size: 15px; }
+
+  .partners { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .card { background: var(--surface); border: 1px solid var(--line); }
+  .partner { padding: 0 24px 24px; display: flex; flex-direction: column; gap: 14px; }
+  .partner .logo { height: 80px; display: flex; align-items: center; background: var(--ink); padding: 0 20px; margin: 0 -24px 8px; border-bottom: 3px solid var(--yellow); }
+  .partner .logo img { max-height: 44px; max-width: 100%; width: auto; }
+  .partner h3 { font-size: 24px; }
+  .partner p { color: var(--muted); font-size: 14px; }
+  .spec { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 13px; padding-top: 14px; border-top: 1px solid var(--line); margin-top: auto; }
+  .spec dt { color: var(--muted); text-transform: uppercase; letter-spacing: .14em; font-size: 11px; font-weight: 600; padding-top: 2px; }
+  .spec dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .see { align-self: flex-start; background: var(--ink); color: #fff; border: 1px solid var(--ink); padding: 9px 16px; cursor: pointer; font-family: var(--display); font-weight: 500; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; }
+  .see:hover { background: var(--yellow); color: var(--ink); }
+
+  .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .kitcard .opt { display: inline-block; background: var(--yellow); color: var(--ink); font-family: var(--display); font-weight: 600; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; padding: 3px 8px; margin-left: 8px; vertical-align: middle; }
+  .benefits { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+  .benefit { padding: 22px 20px 24px; border-top: 4px solid var(--yellow); }
+  .benefit .n { font-family: var(--display); font-weight: 600; font-size: 30px; color: var(--ink); }
+  .benefit h3 { font-size: 20px; margin-top: 8px; line-height: 1.15; }
+  .benefit p { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  .benefit.lead { background: var(--ink); border-color: var(--yellow); }
+  .benefit.lead .n, .benefit.lead h3 { color: var(--yellow); }
+  .benefit.lead p { color: #CFCFCF; }
+  .kitcard { padding: 18px; display: flex; flex-direction: column; gap: 14px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .pair figure { margin: 0; background: var(--bg); padding: 10px; display: flex; flex-direction: column; }
+  .pair img { width: 100%; aspect-ratio: 1 / 1.1; object-fit: contain; display: block; }
+  .pair figcaption { font-family: var(--display); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-top: 8px; text-align: center; }
+  .card-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .kitcard h3 { font-size: 20px; }
+
+  footer { background: var(--ink); color: #CFCFCF; margin-top: clamp(40px, 6vw, 80px); }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 28px; }
+  footer .site { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: .3em; text-transform: uppercase; color: #fff; }
+  footer small { font-size: 12px; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .stage-box { order: -1; }
+    .partners, .gallery { grid-template-columns: 1fr; }
+    .benefits { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .kits { grid-template-columns: 1fr; }
+    .kit { flex-direction: row; align-items: center; }
+    .swatch { width: 40px; flex: none; }
+    .top .meta { display: none; }
+    .legend li { grid-template-columns: 90px 1fr; }
+    .legend img { width: 90px; }
+    .benefits { grid-template-columns: 1fr; }
+    .hint { left: 16px; transform: none; font-size: 10px; letter-spacing: .14em; }
+  }
+  @media (prefers-reduced-motion: reduce) { .legend li, .hint, .kit { transition: none; } }
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><img src="assets/athletum_crest.webp" alt="Athletum F&uacute;tbol Club crest"><b>Athletum FC</b></div>
+    <div class="meta">Season 2027-28 &middot; Sponsorship proposal</div>
+  </div>
+</header>
+<div class="yellow-rule"></div>
+
+<div class="wrap">
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <span class="eyebrow">New kits 2027-28</span>
+        <h1 id="hero-title">Your brand on the Athletum kit.</h1>
+        <p class="lede">Turn the jersey to see the proposed placement: evian on the front, Reserve Padel and Life Properties framing the player number on the back. The black kit is shown in its two design options.</p>
+
+        <p class="group-label" id="kit-label">Kit</p>
+        <div class="kits" role="group" aria-labelledby="kit-label">
+          <button class="kit" id="kit-j3" data-kit="j3" aria-pressed="true"><div class="swatch"><i style="background:#F2D21B"></i><i style="background:#F2A31B"></i><i style="background:#111"></i></div><span>Yellow</span><small>Kit 01</small></button>
+          <button class="kit" id="kit-j4" data-kit="j4" aria-pressed="false"><div class="swatch"><i style="background:#D9DADF"></i><i style="background:#FFFFFF"></i><i style="background:#BFC1C6"></i></div><span>Gray &middot; Training</span><small>Kit 02</small></button>
+          <button class="kit" id="kit-j1" data-kit="j1" aria-pressed="false"><div class="swatch"><i style="background:#111"></i><i style="background:#7EA7DC"></i><i style="background:#C9B27A"></i></div><span>Black &middot; Option 1</span><small>Kit 03</small></button>
+          <button class="kit" id="kit-j2" data-kit="j2" aria-pressed="false"><div class="swatch"><i style="background:#111"></i><i style="background:#7EA7DC"></i><i style="background:#2B3240"></i></div><span>Black &middot; Option 2</span><small>Kit 03</small></button>
+        </div>
+
+        <p class="group-label" id="side-label">View</p>
+        <div class="sides" role="group" aria-labelledby="side-label">
+          <button class="side" id="side-front" data-side="front" aria-pressed="true">Front</button>
+          <button class="side" id="side-back" data-side="back" aria-pressed="false">Back</button>
+        </div>
+
+        <p class="group-label">On this side</p>
+        <ul class="legend" id="legend">
+          <li data-on="front"><img src="assets/evian_black.webp" alt="evian"><span><b>Front &middot; center chest</b>Main sponsor</span></li>
+          <li data-on="back"><img src="assets/reserve_wordmark_black.webp" alt="Reserve Padel"><span><b>Back &middot; above the number</b>Upper back, under the collar</span></li>
+          <li data-on="back"><img src="assets/lifeproperties_black.webp" alt="Life Properties International"><span><b>Back &middot; below the number</b>Lower back, full width</span></li>
+        </ul>
+      </div>
+
+      <div class="stage-box">
+        <div class="stage" id="stage" tabindex="0" role="img" aria-label="Yellow kit, front view. Drag or use the arrow keys to turn the jersey; scroll or pinch to zoom.">
+          <canvas id="gl" aria-hidden="true"></canvas>
+          <img class="fallback" id="fallback" src="assets/j3_amarilla_front.webp" alt="" hidden>
+          <div class="hud"><span class="now" id="now">Kit 01 &middot; Front</span><span class="deg" id="deg">0&deg;</span></div>
+          <div class="zoom">
+            <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+            <button type="button" id="zoom-out" aria-label="Zoom out">&minus;</button>
+            <button type="button" id="zoom-reset" aria-label="Reset view"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5a5.5 5.5 0 1 1-5.2 3.7M2.5 2.5v4h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+          <div class="hint"><svg viewBox="0 0 34 12" aria-hidden="true"><path d="M1 6h32M6 1 1 6l5 5M28 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Drag to turn &middot; scroll to zoom</div>
+          <div class="loading" id="loading">Loading kit&hellip;</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="ben-title">
+      <div class="block-head">
+        <div><span class="eyebrow">Why Athletum</span><h2 id="ben-title">How could this benefit your organization?</h2></div>
+        <p>Sponsoring Athletum FC places your brand on the kit our players wear every season, on and off the pitch.</p>
+      </div>
+      <div class="benefits">
+        <article class="card benefit lead"><div class="n">01</div><h3>Brand exposure &amp; visibility</h3><p>Associate your company with Athletum FC and the Juventus Academy Miami family, the largest youth soccer academy in South Florida, at MLS NEXT matches and major US tournaments.</p></article>
+        <article class="card benefit"><div class="n">02</div><h3>Targeted marketing</h3><p>Reach young soccer players and their families, an audience engaged with sports, health and lifestyle products and services.</p></article>
+        <article class="card benefit"><div class="n">03</div><h3>Networking opportunities</h3><p>Sponsorship comes with access to club events and the wider Athletum and Juventus Academy Miami community.</p></article>
+        <article class="card benefit"><div class="n">04</div><h3>Social media presence</h3><p>Your logo and name featured on the official Athletum and Juventus Academy Miami social media channels.</p></article>
+        <article class="card benefit"><div class="n">05</div><h3>Community engagement</h3><p>Supporting a youth program shows your company's commitment to community development and the next generation.</p></article>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="place-title">
+      <div class="block-head">
+        <div><span class="eyebrow">Proposed placement</span><h2 id="place-title">Where each sponsor sits</h2></div>
+        <p>One position per sponsor, the same on every kit. Print widths are the proposal used in these renders.</p>
+      </div>
+      <div class="partners">
+        <article class="card partner">
+          <div class="logo"><img src="assets/evian_white.webp" alt="evian"></div>
+          <h3>Front &middot; center chest</h3>
+          <p>The main sponsor position: the largest print on the kit, in every front-facing photo and on the bench.</p>
+          <dl class="spec"><dt>Side</dt><dd>Front</dd><dt>Width</dt><dd>&asymp; 20 cm</dd><dt>Sponsor</dt><dd>evian</dd></dl>
+          <button class="see" data-goto="front">See it on the kit</button>
+        </article>
+        <article class="card partner">
+          <div class="logo"><img src="assets/reserve_wordmark_white.webp" alt="Reserve Padel"></div>
+          <h3>Back &middot; above the number</h3>
+          <p>Upper back, just under the collar, framed by the player number in every match photo taken from behind.</p>
+          <dl class="spec"><dt>Side</dt><dd>Back, top</dd><dt>Width</dt><dd>&asymp; 18 cm</dd><dt>Sponsor</dt><dd>Reserve Padel</dd></dl>
+          <button class="see" data-goto="back">See it on the kit</button>
+        </article>
+        <article class="card partner">
+          <div class="logo"><img src="assets/lifeproperties_white.webp" alt="Life Properties International"></div>
+          <h3>Back &middot; below the number</h3>
+          <p>Lower back, directly under the player number, running the full width of the shirt.</p>
+          <dl class="spec"><dt>Side</dt><dd>Back, bottom</dd><dt>Width</dt><dd>&asymp; 22 cm</dd><dt>Sponsor</dt><dd>Life Properties International</dd></dl>
+          <button class="see" data-goto="back">See it on the kit</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="kits-title">
+      <div class="block-head">
+        <div><span class="eyebrow">Kits</span><h2 id="kits-title">The 2027-28 kits</h2></div>
+        <p>Yellow, gray training and black. Two designs are under consideration for the black kit. Open any of them in the 3D view.</p>
+      </div>
+      <div class="gallery">
+        <article class="card kitcard">
+          <div class="pair">
+            <figure><img src="assets/j3_amarilla_front.webp" alt="Yellow kit front, evian on the chest"><figcaption>Front</figcaption></figure>
+            <figure><img src="assets/j3_amarilla_back.webp" alt="Yellow kit back, Reserve Padel above the number 10 and Life Properties below"><figcaption>Back</figcaption></figure>
+          </div>
+          <div class="card-foot"><h3>Kit 01 &middot; Yellow</h3><button class="see" data-open="j3">View in 3D</button></div>
+        </article>
+        <article class="card kitcard">
+          <div class="pair">
+            <figure><img src="assets/j4_gris_front.webp" alt="Gray - Training kit front, evian on the chest"><figcaption>Front</figcaption></figure>
+            <figure><img src="assets/j4_gris_back.webp" alt="Gray - Training kit back, Reserve Padel above the number 10 and Life Properties below"><figcaption>Back</figcaption></figure>
+          </div>
+          <div class="card-foot"><h3>Kit 02 &middot; Gray &middot; Training</h3><button class="see" data-open="j4">View in 3D</button></div>
+        </article>
+        <article class="card kitcard">
+          <div class="pair">
+            <figure><img src="assets/j1_celeste_front.webp" alt="Black - Option 1 kit front, evian on the chest"><figcaption>Front</figcaption></figure>
+            <figure><img src="assets/j1_celeste_back.webp" alt="Black - Option 1 kit back, Reserve Padel above the number 10 and Life Properties below"><figcaption>Back</figcaption></figure>
+          </div>
+          <div class="card-foot"><h3>Kit 03 &middot; Black<span class="opt">Option 1</span></h3><button class="see" data-open="j1">View in 3D</button></div>
+        </article>
+        <article class="card kitcard">
+          <div class="pair">
+            <figure><img src="assets/j2_negra_front.webp" alt="Black - Option 2 kit front, evian on the chest"><figcaption>Front</figcaption></figure>
+            <figure><img src="assets/j2_negra_back.webp" alt="Black - Option 2 kit back, Reserve Padel above the number 10 and Life Properties below"><figcaption>Back</figcaption></figure>
+          </div>
+          <div class="card-foot"><h3>Kit 03 &middot; Black<span class="opt">Option 2</span></h3><button class="see" data-open="j2">View in 3D</button></div>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span class="site">athletumfc.com</span>
+    <small>Athletum F&uacute;tbol Club &middot; MLS NEXT &middot; Miami &middot; Confidential sponsorship proposal, season 2027-28. Placements and kit designs shown for discussion; number 10 shown as an example.</small>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>
